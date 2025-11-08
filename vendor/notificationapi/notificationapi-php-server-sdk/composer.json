@@ -1,0 +1,35 @@
+{
+    "name": "notificationapi/notificationapi-php-server-sdk",
+    "description": "NotificationAPI SDK for server-side (back-end) PHP applications",
+    "type": "library",
+    "require": {
+      "php": ">=5.3.0",
+      "pheromone/phpcs-security-audit": "2.0.1"
+    },
+    "license": "proprietary",
+    "authors": [
+      {
+        "name": "Sahand Seifi",
+        "email": "sahand@notificationapi.com"
+      },
+      {
+        "name": "Mohammad Asadi",
+        "email": "mohammad@notificationapi.com"
+      }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "NotificationAPI": "src/"
+        }
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "dev-master"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "version": "1.0.0"
+}

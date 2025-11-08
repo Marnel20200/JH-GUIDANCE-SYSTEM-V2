@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: url("https://online.jhcsc.edu.ph/img/red.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(28,159,63,0.8));
+  backdrop-filter: blur(7px);
+  z-index: -1;
+}
+
+
+.topbar {
+  background: #1c9f3f;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-start;  /* align items from left */
+  align-items: center;
+  gap: 20px; /* space between back button and title */
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.topbar .back-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.profile-card {
+  max-width: 800px;
+  background: #fff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section h3 {
+  margin-bottom: 8px;
+  color: #1c9f3f;
+}
+
+.section p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.topbar {
+  background: #1c9f3f;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar .back-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

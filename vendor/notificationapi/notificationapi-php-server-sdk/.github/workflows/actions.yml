@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - master
+name: pipeline
+jobs:
+  pipeline:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required for version detection
+
+      - name: Get version from composer.json
+        id: version
+        run: |
+          VERSION=$(grep -oP '(?<="version": ")[^"]*' composer.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create and push tag
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git tag -a "v${{ steps.version.outputs.version }}" -m "Release v${{ steps.version.outputs.version }}"
+          git push origin "v${{ steps.version.outputs.version }}"
